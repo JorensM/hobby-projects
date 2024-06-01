@@ -19,37 +19,13 @@ export default async function ProtectedPage() {
 
   return (
     <div className="flex-1 w-full flex flex-col gap-4 items-center">
-      <div className="w-full flex justify-center items-center border-b border-b-foreground/10 h-16">
-        <h1 className='text-lg font-bold hover:underline'><Link href='/'>Hobby Projects</Link></h1>
-        <nav className="w-full max-w-4xl flex justify-end items-center p-3 text-sm">
-          {/* {isSupabaseConnected && <AuthButton />} */}
-          <AuthButton />
-        </nav>
-      </div>
-
       <div className='flex-grow w-full max-w-[1000px]'>
-        <main>
           <h2 className='text-4xl mb-4'>Dashboard</h2>
           <div className='flex gap-2 items-center justify-between'>
             <h3 className='text-2xl w-fit'>My projects</h3>
             <Link href='/protected/project/123' className='bg-blue-400 p-2 rounded-md hover:bg-blue-500'>Create project</Link>
           </div>
-        </main>
       </div>
-
-      <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
-        <p>
-          Powered by{" "}
-          <a
-            href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-            target="_blank"
-            className="font-bold hover:underline"
-            rel="noreferrer"
-          >
-            Supabase
-          </a>
-        </p>
-      </footer>
     </div>
   );
 }
