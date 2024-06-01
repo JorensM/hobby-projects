@@ -21,31 +21,31 @@ export default function RootLayout({
   return (
     <html lang="en" className={GeistSans.className}>
       <body className="bg-background text-foreground">
-      <div className="flex-1 w-full h-screen flex flex-col gap-4 items-center">
-        <div className="w-full flex justify-center items-center border-b border-b-foreground/10 h-16">
-          <h1 className='text-lg font-bold hover:underline'><Link href='/'>Hobby Projects</Link></h1>
-          <nav className="w-full max-w-4xl flex justify-end items-center p-3 text-sm">
-            {/* {isSupabaseConnected && <AuthButton />} */}
-            <AuthButton />
-          </nav>
+        <div className="flex-1 w-full h-screen flex flex-col gap-4 items-center">
+          <div className="w-full flex justify-center items-center border-b border-b-foreground/10 h-16 px-2">
+            <h1 className='text-lg font-bold hover:underline'><Link href='/'>Hobby Projects</Link></h1>
+            <nav className="w-full max-w-4xl flex justify-end items-center p-3 text-sm pr-0">
+              {/* {isSupabaseConnected && <AuthButton />} */}
+              <AuthButton />
+            </nav>
+          </div>
+          <main className='flex-grow max-w-[1000px] w-full px-2'>
+            {children}
+          </main>
+          <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
+            <p>
+              Powered by{" "}
+              <a
+                href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
+                target="_blank"
+                className="font-bold hover:underline"
+                rel="noreferrer"
+              >
+                Supabase
+              </a>
+            </p>
+          </footer>
         </div>
-        <main className='flex-grow max-w-[1000px] w-full'>
-          {children}
-        </main>
-        <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
-        <p>
-          Powered by{" "}
-          <a
-            href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-            target="_blank"
-            className="font-bold hover:underline"
-            rel="noreferrer"
-          >
-            Supabase
-          </a>
-        </p>
-      </footer>
-      </div>
       </body>
     </html>
   );
