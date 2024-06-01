@@ -20,6 +20,10 @@
   }
 }
 
+body, html {
+  width: 100vw;
+}
+
 @layer base {
   * {
     @apply border-foreground/20;
@@ -39,4 +43,12 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+input {
+  border: 1px solid gray;
+}
+
+textarea {
+  border: 1px solid gray;
 }
