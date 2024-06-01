@@ -23,7 +23,7 @@ export default async function ProtectedPage() {
           <h2 className='text-4xl mb-4'>Dashboard</h2>
           <div className='flex gap-2 items-center justify-between'>
             <h3 className='text-2xl w-fit'>My projects</h3>
-            <Link href='/protected/project/123' className='bg-blue-400 p-2 rounded-md hover:bg-blue-500'>Create project</Link>
+            <Link href='/protected/project/new' className='bg-blue-400 p-2 rounded-md hover:bg-blue-500'>Create project</Link>
           </div>
       </div>
     </div>
